@@ -1,8 +1,11 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-/* Используем кастомный цвет точно как в tailwind.config.js */
+@theme {
+  --color-primary-green: #4ade80;
+  --color-dark-bg: #0f172a;
+  --color-steel-gray: #334155;
+}
+
 body {
-  @apply bg-darkBg text-white font-sans;
+  @apply bg-dark-bg text-white font-sans antialiased;
 }
