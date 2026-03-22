@@ -1,6 +1,9 @@
 import AdvantagesSection from "./components/AdvantagesSection";
 import AudienceSection from "./components/AudienceSection";
+import ContactSection from "./components/ContactSection";
 import EquipmentSection from "./components/EquipmentSection";
+import Footer from "./components/Footer";
+import GallerySection from "./components/GallerySection";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import ProcessSection from "./components/ProcessSection";
@@ -17,9 +20,10 @@ export default function Home() {
         <ProcessSection />
         <AdvantagesSection />
         <EquipmentSection />
-        <section id="gallery" className="h-1" />
-        <section id="contacts" className="h-1" />
+        <GallerySection />
+        <ContactSection />
       </main>
+      <Footer />
     </>
   );
 }
