@@ -49,7 +49,7 @@ export default function Footer() {
           <h3 className="text-[22px] font-extrabold text-white">Навигация</h3>
           <nav className="mt-5 space-y-3 text-[18px] text-[#97B0D1]">
             {navigation.map((item) => (
-              <Link key={item.href} href={item.href} className="block transition hover:text-white">
+              <Link key={item.href} href={item.href} className="block transition duration-300 hover:translate-x-1 hover:text-white">
                 {item.label}
               </Link>
             ))}
@@ -59,11 +59,11 @@ export default function Footer() {
         <div>
           <h3 className="text-[22px] font-extrabold text-white">Контакты</h3>
           <div className="mt-5 space-y-4 text-[18px] text-[#97B0D1]">
-            <a href="tel:+74951234567" className="flex items-center gap-3 transition hover:text-white">
+            <a href="tel:+74951234567" className="flex items-center gap-3 transition duration-300 hover:translate-x-1 hover:text-white">
               <PhoneIcon />
               +7 (495) 123-45-67
             </a>
-            <a href="mailto:info@kvartsmet.ru" className="flex items-center gap-3 transition hover:text-white">
+            <a href="mailto:info@kvartsmet.ru" className="flex items-center gap-3 transition duration-300 hover:translate-x-1 hover:text-white">
               <MailIcon />
               info@kvartsmet.ru
             </a>

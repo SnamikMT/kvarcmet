@@ -25,7 +25,7 @@ export default function EquipmentSection() {
           {equipmentCards.map(([title, description]) => (
             <article
               key={title}
-              className="rounded-[12px] border border-white/12 bg-[#233146]/78 px-6 py-6 backdrop-blur-[2px]"
+              className="rounded-[12px] border border-white/12 bg-[#233146]/78 px-6 py-6 backdrop-blur-[2px] transition duration-300 hover:-translate-y-1 hover:border-[#4ADE80]/35 hover:shadow-[0_18px_36px_rgba(0,0,0,0.16)]"
             >
               <h3 className="text-[18px] font-extrabold text-white">{title}</h3>
               <p className="mt-3 text-[15px] leading-7 text-[#99AFCD]">{description}</p>

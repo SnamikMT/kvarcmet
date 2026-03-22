@@ -9,9 +9,34 @@ import Hero from "./components/Hero";
 import ProcessSection from "./components/ProcessSection";
 import ServicesSection from "./components/ServicesSection";
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "КВАРЦМЕТ",
+  url: "https://kvartsmet.ru",
+  telephone: "+7 (495) 123-45-67",
+  email: "info@kvartsmet.ru",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Москва",
+    streetAddress: "ул. Промышленная, д. 12",
+    addressCountry: "RU",
+  },
+  areaServed: "Россия",
+  description:
+    "Металлообработка и изготовление деталей по чертежам, образцам и фото для производственных компаний по всей России.",
+  makesOffer: [
+    "Токарные работы",
+    "Фрезерные работы",
+    "Сварочные и сборочные работы",
+    "Изготовление деталей по чертежам",
+  ],
+};
+
 export default function Home() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       <Header />
       <Hero />
       <main className="bg-[#0C1529] text-white">

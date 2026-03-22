@@ -90,7 +90,7 @@ export default function ServicesSection() {
 
         <div className="mt-14 grid gap-6 lg:grid-cols-3">
           {serviceCards.map(({ title, description, badge, icon: Icon }) => (
-            <article key={title} className="rounded-[12px] border border-[#394860] bg-[#202C3F] px-6 py-6">
+            <article key={title} className="rounded-[12px] border border-[#394860] bg-[#202C3F] px-6 py-6 transition duration-300 hover:-translate-y-1 hover:border-[#4ADE80]/40 hover:shadow-[0_20px_40px_rgba(0,0,0,0.18)]">
               <div className="text-[#4ADE80]">
                 <Icon />
               </div>
@@ -102,14 +102,14 @@ export default function ServicesSection() {
             </article>
           ))}
 
-          <article className="flex min-h-[220px] flex-col items-center justify-center rounded-[12px] border border-[#226D4E] bg-[#122533] px-8 py-8 text-center">
+          <article className="flex min-h-[220px] flex-col items-center justify-center rounded-[12px] border border-[#226D4E] bg-[#122533] px-8 py-8 text-center transition duration-300 hover:-translate-y-1 hover:shadow-[0_22px_42px_rgba(0,0,0,0.22)]">
             <h3 className="text-[20px] font-extrabold text-white">Нужна нестандартная обработка?</h3>
             <p className="mt-4 max-w-[280px] text-[16px] leading-7 text-[#94A9C8]">
               Отправьте чертёж — рассчитаем стоимость бесплатно
             </p>
             <a
               href="#contacts"
-              className="mt-8 inline-flex h-12 items-center rounded-[8px] bg-[#4ADE80] px-7 text-[17px] font-semibold text-[#07111F] transition hover:brightness-110"
+              className="mt-8 inline-flex h-12 items-center rounded-[8px] bg-[#4ADE80] px-7 text-[17px] font-semibold text-[#07111F] transition duration-300 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-[0_16px_36px_rgba(74,222,128,0.24)]"
             >
               Отправить запрос
             </a>

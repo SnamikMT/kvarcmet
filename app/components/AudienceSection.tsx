@@ -78,7 +78,7 @@ export default function AudienceSection() {
           {audienceCards.map(({ title, description, icon: Icon }) => (
             <article
               key={title}
-              className="rounded-[12px] border border-[#3A4960] bg-[#202C3F] px-8 py-8 text-center shadow-[0_0_0_1px_rgba(255,255,255,0.01)]"
+              className="rounded-[12px] border border-[#3A4960] bg-[#202C3F] px-8 py-8 text-center shadow-[0_0_0_1px_rgba(255,255,255,0.01)] transition duration-300 hover:-translate-y-1 hover:border-[#4ADE80]/40 hover:shadow-[0_20px_40px_rgba(0,0,0,0.18)]"
             >
               <div className="flex justify-center text-[#4ADE80]">
                 <Icon />

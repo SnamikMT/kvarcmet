@@ -61,7 +61,7 @@ export default function AdvantagesSection() {
 
         <div className="mt-16 grid gap-10 lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2">
           {advantages.map(([title, description, Icon]) => (
-            <article key={title} className="text-center">
+            <article key={title} className="text-center transition duration-300 hover:-translate-y-1">
               <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#123238] text-[#4ADE80]">
                 <Icon />
               </div>

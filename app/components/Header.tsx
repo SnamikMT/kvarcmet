@@ -28,7 +28,7 @@ export default function Header() {
 
         <nav className="hidden items-center gap-10 text-[15px] font-semibold text-slate-400 lg:flex">
           {navigation.map((item) => (
-            <Link key={item.href} href={item.href} className="transition hover:text-white">
+            <Link key={item.href} href={item.href} className="transition duration-300 hover:-translate-y-0.5 hover:text-white">
               {item.label}
             </Link>
           ))}
@@ -44,7 +44,7 @@ export default function Header() {
           </a>
           <a
             href="#contacts"
-            className="inline-flex h-10 items-center rounded-[8px] bg-[#4ADE80] px-5 text-[15px] font-semibold text-[#07111F] transition hover:brightness-110"
+            className="inline-flex h-10 items-center rounded-[8px] bg-[#4ADE80] px-5 text-[15px] font-semibold text-[#07111F] transition duration-300 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-[0_12px_28px_rgba(74,222,128,0.26)]"
           >
             Отправить чертёж
           </a>

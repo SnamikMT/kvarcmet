@@ -50,14 +50,14 @@ export default function Hero() {
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <a
               href="#contacts"
-              className="inline-flex h-14 items-center justify-center gap-3 rounded-[8px] bg-[#4ADE80] px-8 text-[18px] font-semibold text-[#07111F] transition hover:brightness-110"
+              className="inline-flex h-14 items-center justify-center gap-3 rounded-[8px] bg-[#4ADE80] px-8 text-[18px] font-semibold text-[#07111F] transition duration-300 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-[0_20px_44px_rgba(74,222,128,0.22)]"
             >
               <DocumentIcon />
               Отправить чертёж
             </a>
             <a
               href="#gallery"
-              className="inline-flex h-14 items-center justify-center gap-3 rounded-[8px] border border-[#33425D] bg-transparent px-8 text-[18px] font-semibold text-white transition hover:border-[#4C5D7F] hover:bg-white/[0.03]"
+              className="inline-flex h-14 items-center justify-center gap-3 rounded-[8px] border border-[#33425D] bg-transparent px-8 text-[18px] font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-[#4C5D7F] hover:bg-white/[0.03]"
             >
               Показать деталь
               <ArrowIcon />
