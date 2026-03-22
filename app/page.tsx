@@ -1,23 +1,21 @@
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen items-center justify-center bg-white px-6 text-slate-900">
-      <section className="w-full max-w-2xl rounded-2xl border border-slate-200 bg-slate-50 p-10 shadow-sm">
-        <p className="text-sm font-medium uppercase tracking-[0.2em] text-slate-500">Next.js 16</p>
-        <h1 className="mt-4 text-4xl font-semibold tracking-tight text-slate-900">
-          Чистый проект готов к разработке
-        </h1>
-        <p className="mt-4 text-base leading-7 text-slate-600">
-          Базовый App Router шаблон запускается без кастомных компонентов, нестандартных Tailwind-токенов и лишней логики.
-        </p>
-        <div className="mt-8 flex flex-wrap gap-3">
-          <code className="rounded-full bg-slate-900 px-4 py-2 text-sm font-medium text-white">
-            npm run dev
-          </code>
-          <code className="rounded-full bg-slate-200 px-4 py-2 text-sm font-medium text-slate-700">
-            app/page.tsx
-          </code>
+    <>
+      <Header />
+      <Hero />
+      <main className="bg-[#020617] px-6 pb-24 text-white">
+        <div className="mx-auto max-w-7xl rounded-[2rem] border border-white/10 bg-white/[0.03] p-8 text-slate-300">
+          <p className="text-sm uppercase tracking-[0.3em] text-[#4ADE80]">Следующий шаг</p>
+          <h2 className="mt-4 text-3xl font-semibold text-white">База готова для дальнейшей разработки</h2>
+          <p className="mt-4 max-w-3xl text-base leading-7">
+            Теперь проект снова рабочий и уже содержит стартовые секции Header и Hero. Дальше можно спокойно
+            наращивать блоки лендинга, формы, адаптив и контент без возврата к проблемам со сборкой.
+          </p>
         </div>
-      </section>
-    </main>
+      </main>
+    </>
   );
 }
