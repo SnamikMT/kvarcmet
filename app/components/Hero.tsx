@@ -1,79 +1,70 @@
+function DocumentIcon() {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
+      <path d="M8 3.75h5.5L18.25 8.5V18A2.25 2.25 0 0 1 16 20.25H8A2.25 2.25 0 0 1 5.75 18V6A2.25 2.25 0 0 1 8 3.75Z" />
+      <path d="M13.25 3.75V8.5h4.75" />
+      <path d="M9 12.5h6M9 16h4.5" />
+    </svg>
+  );
+}
+
+function ArrowIcon() {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
+      <path d="M5 12h14" />
+      <path d="m13 6 6 6-6 6" />
+    </svg>
+  );
+}
+
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(74,222,128,0.18),_transparent_30%),linear-gradient(180deg,_rgba(15,23,42,0.92),_rgba(2,6,23,1))]" />
-      <div className="relative mx-auto grid min-h-[calc(100vh-81px)] max-w-7xl gap-12 px-6 py-16 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:py-24">
-        <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-200">
-            <span className="h-2 w-2 rounded-full bg-[#4ADE80]" />
-            Работаем с серийными и штучными заказами
+    <section className="relative min-h-screen overflow-hidden bg-[#0C1529] text-white">
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-55"
+        style={{ backgroundImage: "url('/hero-industrial-bg.svg')" }}
+      />
+      <div className="absolute inset-0 bg-[linear-gradient(90deg,_rgba(12,21,41,0.96)_0%,_rgba(12,21,41,0.92)_36%,_rgba(12,21,41,0.76)_58%,_rgba(12,21,41,0.92)_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_68%,_rgba(255,255,255,0.07),_transparent_24%),radial-gradient(circle_at_72%_18%,_rgba(255,255,255,0.05),_transparent_18%)]" />
+
+      <div className="relative mx-auto flex min-h-screen max-w-[1340px] items-center px-6 pt-32 pb-16">
+        <div className="max-w-[760px]">
+          <div className="inline-flex items-center gap-3 rounded-full border border-white/12 bg-white/[0.04] px-4 py-2 text-[14px] font-medium text-[#8EB1DD] shadow-[0_0_0_1px_rgba(255,255,255,0.03)]">
+            <span className="h-2.5 w-2.5 rounded-full bg-[#4ADE80]" />
+            Работаем с партиями от 10 изделий · Минимальный заказ от 30 000 ₽
           </div>
 
-          <h1 className="mt-8 text-4xl font-semibold leading-tight text-white md:text-6xl">
-            Header и Hero для промышленного лендинга без хрупких зависимостей
+          <h1 className="mt-8 max-w-[720px] text-[58px] font-extrabold leading-[0.96] tracking-[-0.04em] text-white sm:text-[72px] lg:text-[84px]">
+            Изготовление деталей
+            <br />
+            <span className="text-[#4ADE80]">по чертежам и образцам</span>
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-            Делаем чистую базу для дальнейшей разработки: современный первый экран, понятный оффер,
-            акцентный CTA и стили, которые стабильно работают в Next.js 16 и Tailwind 4.
+
+          <p className="mt-8 max-w-[760px] text-[22px] leading-[1.45] text-[#9DB2D6] sm:text-[20px] lg:text-[21px]">
+            Металлообработка любой сложности: токарные, фрезерные, сварочные и сборочные работы.
+          </p>
+          <p className="mt-4 max-w-[680px] text-[15px] leading-7 text-[#8AA0C5]">
+            Работаем по чертежам, эскизам, образцам и фотографиям деталей.
           </p>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <a
               href="#contacts"
-              className="inline-flex items-center justify-center rounded-full bg-[#4ADE80] px-6 py-3 text-base font-semibold text-[#0B1120] transition hover:brightness-110"
+              className="inline-flex h-14 items-center justify-center gap-3 rounded-[8px] bg-[#4ADE80] px-8 text-[18px] font-semibold text-[#07111F] transition hover:brightness-110"
             >
+              <DocumentIcon />
               Отправить чертёж
             </a>
             <a
-              href="#services"
-              className="inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3 text-base font-semibold text-white transition hover:border-white/40 hover:bg-white/5"
+              href="#gallery"
+              className="inline-flex h-14 items-center justify-center gap-3 rounded-[8px] border border-[#33425D] bg-transparent px-8 text-[18px] font-semibold text-white transition hover:border-[#4C5D7F] hover:bg-white/[0.03]"
             >
-              Смотреть услуги
+              Показать деталь
+              <ArrowIcon />
             </a>
           </div>
 
-          <dl className="mt-12 grid gap-6 text-white sm:grid-cols-3">
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-              <dt className="text-sm text-slate-400">Срок расчёта</dt>
-              <dd className="mt-2 text-2xl font-semibold">до 2 часов</dd>
-            </div>
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-              <dt className="text-sm text-slate-400">Материалы</dt>
-              <dd className="mt-2 text-2xl font-semibold">сталь / алюминий</dd>
-            </div>
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-              <dt className="text-sm text-slate-400">Формат работы</dt>
-              <dd className="mt-2 text-2xl font-semibold">B2B и частные</dd>
-            </div>
-          </dl>
-        </div>
-
-        <div className="relative">
-          <div className="absolute -inset-6 rounded-[2rem] bg-[#4ADE80]/10 blur-3xl" />
-          <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-slate-950/80 p-6 shadow-2xl shadow-black/30">
-            <div className="flex items-center justify-between border-b border-white/10 pb-4">
-              <div>
-                <p className="text-sm uppercase tracking-[0.3em] text-slate-500">Production</p>
-                <h2 className="mt-2 text-2xl font-semibold text-white">Участок механической обработки</h2>
-              </div>
-              <span className="rounded-full bg-[#4ADE80]/15 px-3 py-1 text-sm font-medium text-[#4ADE80]">
-                Online
-              </span>
-            </div>
-
-            <div className="mt-6 space-y-4">
-              {[
-                ["Токарные работы", "Высокоточная обработка валов, втулок и фланцев"],
-                ["Фрезерные работы", "Изготовление корпусов, плит и посадочных мест"],
-                ["Сборка и контроль", "Проверка геометрии и подготовка к отгрузке"],
-              ].map(([title, description]) => (
-                <div key={title} className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
-                  <p className="text-lg font-medium text-white">{title}</p>
-                  <p className="mt-2 text-sm leading-6 text-slate-400">{description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+          <p className="mt-5 text-[15px] text-[#7F98BF]">Рассчитаем стоимость в течение 1–2 часов</p>
         </div>
       </div>
     </section>

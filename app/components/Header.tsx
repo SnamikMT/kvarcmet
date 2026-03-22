@@ -2,20 +2,31 @@ import Link from "next/link";
 
 const navigation = [
   { href: "#services", label: "Услуги" },
-  { href: "#advantages", label: "Преимущества" },
+  { href: "#equipment", label: "Оборудование" },
+  { href: "#gallery", label: "Примеры работ" },
   { href: "#contacts", label: "Контакты" },
 ];
 
+function PhoneIcon() {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.9">
+      <path d="M5 4.5h3l1.2 4.2-1.8 1.8a15.4 15.4 0 0 0 6.1 6.1l1.8-1.8L19.5 16v3a1.5 1.5 0 0 1-1.7 1.5C10.2 19.7 4.3 13.8 3.5 6.2A1.5 1.5 0 0 1 5 4.5Z" />
+    </svg>
+  );
+}
+
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#0B1120]/90 backdrop-blur">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-4">
-        <div>
-          <p className="text-xs font-medium uppercase tracking-[0.35em] text-[#4ADE80]">Kvarcmet</p>
-          <p className="mt-1 text-sm text-slate-300">Металлообработка и изготовление деталей на заказ</p>
+    <header className="absolute inset-x-0 top-0 z-50">
+      <div className="mx-auto flex max-w-[1340px] items-center justify-between gap-8 px-6 py-6 text-white">
+        <div className="shrink-0">
+          <p className="text-[15px] font-extrabold uppercase leading-none tracking-[0.02em]">КВАРЦМЕТ</p>
+          <p className="mt-1 text-[11px] font-medium uppercase tracking-[0.14em] text-slate-400">
+            Металлообработка на заказ
+          </p>
         </div>
 
-        <nav className="hidden items-center gap-6 text-sm text-slate-200 md:flex">
+        <nav className="hidden items-center gap-10 text-[15px] font-semibold text-slate-400 lg:flex">
           {navigation.map((item) => (
             <Link key={item.href} href={item.href} className="transition hover:text-white">
               {item.label}
@@ -23,12 +34,21 @@ export default function Header() {
           ))}
         </nav>
 
-        <a
-          href="tel:+74951234567"
-          className="rounded-full border border-[#4ADE80] px-4 py-2 text-sm font-medium text-white transition hover:bg-[#4ADE80] hover:text-[#0B1120]"
-        >
-          +7 (495) 123-45-67
-        </a>
+        <div className="hidden items-center gap-4 md:flex">
+          <a
+            href="tel:+74951234567"
+            className="inline-flex items-center gap-2 text-[15px] font-medium text-slate-300 transition hover:text-white"
+          >
+            <PhoneIcon />
+            +7 (495) 123-45-67
+          </a>
+          <a
+            href="#contacts"
+            className="inline-flex h-10 items-center rounded-[8px] bg-[#4ADE80] px-5 text-[15px] font-semibold text-[#07111F] transition hover:brightness-110"
+          >
+            Отправить чертёж
+          </a>
+        </div>
       </div>
     </header>
   );
