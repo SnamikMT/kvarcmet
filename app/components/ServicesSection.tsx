@@ -3,30 +3,35 @@ const serviceCards = [
     title: "Токарные работы",
     description: "Обработка валов, втулок, фланцев и тел вращения на станках с ЧПУ",
     badge: "Макс. Ø 500 мм",
+    lead: "Срок от 3 рабочих дней",
     icon: LatheIcon,
   },
   {
     title: "Фрезерные работы",
     description: "Корпусные детали, пазы, карманы, плоскости — 3- и 4-осевая обработка",
     badge: "Ход стола до 1000 мм",
+    lead: "Расчёт партии в день обращения",
     icon: MillIcon,
   },
   {
     title: "Сварочные и сборочные работы",
     description: "MIG/MAG, TIG сварка, изготовление металлоконструкций и рам",
     badge: "Сталь, нержавейка, алюминий",
+    lead: "Сборка и контроль перед отгрузкой",
     icon: FlameIcon,
   },
   {
     title: "Изготовление по чертежам",
     description: "Полный цикл: от чертежа или образца до готовой партии деталей",
     badge: "Точность до 0.01 мм",
+    lead: "Берём в работу сложные ТЗ",
     icon: DocumentIcon,
   },
   {
     title: "Дополнительная обработка",
     description: "Шлифовка, термообработка, покрытия, координатно-расточные работы",
     badge: "Все виды финишной обработки",
+    lead: "Подбираем оптимальную технологию",
     icon: LayersIcon,
   },
 ];
@@ -89,16 +94,29 @@ export default function ServicesSection() {
         </div>
 
         <div className="mt-14 grid gap-6 lg:grid-cols-3">
-          {serviceCards.map(({ title, description, badge, icon: Icon }) => (
-            <article key={title} className="rounded-[12px] border border-[#394860] bg-[#202C3F] px-6 py-6 transition duration-300 hover:-translate-y-1 hover:border-[#4ADE80]/40 hover:shadow-[0_20px_40px_rgba(0,0,0,0.18)]">
-              <div className="text-[#4ADE80]">
-                <Icon />
+          {serviceCards.map(({ title, description, badge, lead, icon: Icon }) => (
+            <article
+              key={title}
+              className="group rounded-[12px] border border-[#394860] bg-[#202C3F] px-6 py-6 transition duration-300 hover:-translate-y-1 hover:border-[#4ADE80]/40 hover:shadow-[0_20px_40px_rgba(0,0,0,0.18)]"
+            >
+              <div className="flex items-start justify-between gap-4">
+                <div className="text-[#4ADE80] transition duration-300 group-hover:scale-110">
+                  <Icon />
+                </div>
+                <span className="rounded-full border border-white/10 px-3 py-1 text-[12px] font-semibold uppercase tracking-[0.16em] text-[#AFC5E4]">
+                  {lead}
+                </span>
               </div>
               <h3 className="mt-6 text-[20px] font-extrabold text-white">{title}</h3>
               <p className="mt-3 max-w-[340px] text-[15px] leading-8 text-[#93ADD0]">{description}</p>
-              <span className="mt-5 inline-flex rounded-[7px] bg-[#3A465B] px-3 py-1.5 text-[14px] font-semibold text-[#4ADE80]">
-                {badge}
-              </span>
+              <div className="mt-5 flex items-center justify-between gap-3">
+                <span className="inline-flex rounded-[7px] bg-[#3A465B] px-3 py-1.5 text-[14px] font-semibold text-[#4ADE80]">
+                  {badge}
+                </span>
+                <span className="text-[14px] font-semibold text-white/80 transition duration-300 group-hover:text-[#4ADE80]">
+                  Подробнее →
+                </span>
+              </div>
             </article>
           ))}
 

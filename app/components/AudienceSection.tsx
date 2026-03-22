@@ -2,21 +2,25 @@ const audienceCards = [
   {
     title: "Машиностроительные предприятия",
     description: "Серийное производство деталей и узлов",
+    metric: "Серии до 5 000 шт.",
     icon: FactoryIcon,
   },
   {
     title: "Сервисные центры",
     description: "Запчасти и комплектующие под заказ",
+    metric: "Срочные поставки",
     icon: WrenchIcon,
   },
   {
     title: "Строительные организации",
     description: "Металлоконструкции и крепёж",
+    metric: "От мелких партий до крупных узлов",
     icon: BuildingIcon,
   },
   {
     title: "Производственные компании",
     description: "Нестандартное оборудование и оснастка",
+    metric: "Работаем по ТЗ и образцам",
     icon: HardHatIcon,
   },
 ];
@@ -75,16 +79,17 @@ export default function AudienceSection() {
         </div>
 
         <div className="mt-14 grid gap-6 xl:grid-cols-4 md:grid-cols-2">
-          {audienceCards.map(({ title, description, icon: Icon }) => (
+          {audienceCards.map(({ title, description, metric, icon: Icon }) => (
             <article
               key={title}
               className="rounded-[12px] border border-[#3A4960] bg-[#202C3F] px-8 py-8 text-center shadow-[0_0_0_1px_rgba(255,255,255,0.01)] transition duration-300 hover:-translate-y-1 hover:border-[#4ADE80]/40 hover:shadow-[0_20px_40px_rgba(0,0,0,0.18)]"
             >
-              <div className="flex justify-center text-[#4ADE80]">
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#173541] text-[#4ADE80] shadow-[0_0_0_1px_rgba(74,222,128,0.14)]">
                 <Icon />
               </div>
               <h3 className="mt-5 text-[17px] font-extrabold leading-7 text-white">{title}</h3>
               <p className="mt-3 text-[15px] leading-6 text-[#8EABC9]">{description}</p>
+              <p className="mt-4 text-[14px] font-semibold text-[#4ADE80]">{metric}</p>
             </article>
           ))}
         </div>

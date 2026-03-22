@@ -17,11 +17,13 @@ export default function ProcessSection() {
         <div className="mt-14 grid gap-10 lg:grid-cols-5">
           {steps.map(([number, title, description], index) => (
             <article key={number} className="relative text-center">
-              <div className="text-[66px] font-extrabold leading-none tracking-[-0.05em] text-[#2F695C]">{number}</div>
+              <div className="mx-auto flex h-28 w-28 items-center justify-center rounded-full border border-[#2F695C]/40 bg-[#1A2B3E] text-[54px] font-extrabold leading-none tracking-[-0.05em] text-[#4ADE80] shadow-[0_0_0_1px_rgba(74,222,128,0.08)]">
+                {number}
+              </div>
               {index < steps.length - 1 && (
-                <span className="absolute top-8 right-[-12px] hidden h-px w-12 bg-[#2F695C] lg:block" />
+                <span className="absolute top-14 right-[-16px] hidden h-px w-12 bg-[#2F695C] lg:block" />
               )}
-              <h3 className="mt-3 text-[18px] font-extrabold text-white">{title}</h3>
+              <h3 className="mt-5 text-[18px] font-extrabold text-white">{title}</h3>
               <p className="mt-2 text-[15px] leading-6 text-[#8EA8CA]">{description}</p>
             </article>
           ))}

@@ -44,7 +44,10 @@ export default function ContactSection() {
           <p className="mt-6 text-[18px] leading-8 text-[#9AB2D1]">
             Рассчитаем стоимость и сроки изготовления в течение 1–2 часов
           </p>
-          <p className="mt-2 text-[16px] text-[#8EA8C9]">
+          <div className="mt-5 inline-flex items-center justify-center rounded-full border border-[#2B9D65] bg-[#1F3D45] px-5 py-2 text-[15px] font-semibold text-[#A5F2C2] shadow-[0_0_0_1px_rgba(74,222,128,0.12)]">
+            Ответ менеджера в рабочее время — обычно до 120 минут
+          </div>
+          <p className="mt-4 text-[16px] text-[#8EA8C9]">
             Минимальный заказ от 30 000 ₽ · Серийное и мелкосерийное производство
           </p>
         </div>
@@ -105,7 +108,7 @@ export default function ContactSection() {
 
           <button
             type="submit"
-            className="mt-6 inline-flex h-14 w-full items-center justify-center rounded-[8px] bg-[#4ADE80] text-[20px] font-semibold text-[#07111F] transition duration-300 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-[0_16px_36px_rgba(74,222,128,0.24)]"
+            className="mt-6 inline-flex h-14 w-full items-center justify-center rounded-[8px] bg-[linear-gradient(90deg,#4ADE80_0%,#71F3A1_100%)] text-[20px] font-semibold text-[#07111F] transition duration-300 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-[0_20px_44px_rgba(74,222,128,0.24)]"
           >
             Отправить заявку
           </button>

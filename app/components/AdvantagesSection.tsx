@@ -55,14 +55,19 @@ export default function AdvantagesSection() {
   return (
     <section className="bg-[#111A2F] py-24 text-white">
       <div className="mx-auto max-w-[1340px] px-6">
-        <div className="mx-auto max-w-[720px] text-center">
+        <div className="mx-auto max-w-[760px] text-center">
           <h2 className="text-4xl font-extrabold tracking-[-0.03em] text-white sm:text-5xl">Почему выбирают нас</h2>
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-3 text-[14px] font-semibold text-[#B1C4E2]">
+            <span className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2">30+ промышленных компаний</span>
+            <span className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2">500+ изготовленных деталей</span>
+            <span className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2">География поставок — вся Россия</span>
+          </div>
         </div>
 
         <div className="mt-16 grid gap-10 lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2">
           {advantages.map(([title, description, Icon]) => (
             <article key={title} className="text-center transition duration-300 hover:-translate-y-1">
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#123238] text-[#4ADE80]">
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#123238] text-[#4ADE80] shadow-[0_0_0_1px_rgba(74,222,128,0.12)] transition duration-300 hover:scale-105">
                 <Icon />
               </div>
               <h3 className="mt-6 text-[18px] font-extrabold leading-7 text-white">{title}</h3>
