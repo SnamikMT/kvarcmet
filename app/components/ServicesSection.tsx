@@ -5,6 +5,7 @@ const serviceCards = [
     badge: "Макс. Ø 500 мм",
     lead: "Срок от 3 рабочих дней",
     icon: LatheIcon,
+    service: "Токарные работы",
   },
   {
     title: "Фрезерные работы",
@@ -12,6 +13,7 @@ const serviceCards = [
     badge: "Ход стола до 1000 мм",
     lead: "Расчёт партии в день обращения",
     icon: MillIcon,
+    service: "Фрезерные работы",
   },
   {
     title: "Сварочные и сборочные работы",
@@ -19,6 +21,7 @@ const serviceCards = [
     badge: "Сталь, нержавейка, алюминий",
     lead: "Сборка и контроль перед отгрузкой",
     icon: FlameIcon,
+    service: "Сварочные и сборочные работы",
   },
   {
     title: "Изготовление по чертежам",
@@ -26,6 +29,7 @@ const serviceCards = [
     badge: "Точность до 0.01 мм",
     lead: "Берём в работу сложные ТЗ",
     icon: DocumentIcon,
+    service: "Изготовление по чертежам",
   },
   {
     title: "Дополнительная обработка",
@@ -33,6 +37,7 @@ const serviceCards = [
     badge: "Все виды финишной обработки",
     lead: "Подбираем оптимальную технологию",
     icon: LayersIcon,
+    service: "Дополнительная обработка",
   },
 ];
 
@@ -113,9 +118,12 @@ export default function ServicesSection() {
                 <span className="inline-flex rounded-[7px] bg-[#3A465B] px-3 py-1.5 text-[14px] font-semibold text-[#4ADE80]">
                   {badge}
                 </span>
-                <span className="text-[14px] font-semibold text-white/80 transition duration-300 group-hover:text-[#4ADE80]">
+                <a
+                  href="#contacts"
+                  className="text-[14px] font-semibold text-white/80 transition duration-300 group-hover:text-[#4ADE80] hover:text-[#4ADE80]"
+                >
                   Подробнее →
-                </span>
+                </a>
               </div>
             </article>
           ))}
@@ -123,13 +131,13 @@ export default function ServicesSection() {
           <article className="flex min-h-[220px] flex-col items-center justify-center rounded-[12px] border border-[#226D4E] bg-[#122533] px-8 py-8 text-center transition duration-300 hover:-translate-y-1 hover:shadow-[0_22px_42px_rgba(0,0,0,0.22)]">
             <h3 className="text-[20px] font-extrabold text-white">Нужна нестандартная обработка?</h3>
             <p className="mt-4 max-w-[280px] text-[16px] leading-7 text-[#94A9C8]">
-              Отправьте чертёж — рассчитаем стоимость бесплатно
+              Нет чертежа? Просто опишите задачу — подскажем решение и подготовим расчёт.
             </p>
             <a
               href="#contacts"
               className="mt-8 inline-flex h-12 items-center rounded-[8px] bg-[#4ADE80] px-7 text-[17px] font-semibold text-[#07111F] transition duration-300 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-[0_16px_36px_rgba(74,222,128,0.24)]"
             >
-              Отправить запрос
+              Связаться с инженером
             </a>
           </article>
         </div>

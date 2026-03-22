@@ -12,6 +12,23 @@ function UploadIcon() {
   );
 }
 
+function PhoneIcon() {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
+      <path d="M5 4.5h3l1.2 4.2-1.8 1.8a15.4 15.4 0 0 0 6.1 6.1l1.8-1.8L19.5 16v3a1.5 1.5 0 0 1-1.7 1.5C10.2 19.7 4.3 13.8 3.5 6.2A1.5 1.5 0 0 1 5 4.5Z" />
+    </svg>
+  );
+}
+
+function MailIcon() {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
+      <path d="M4.75 7.75A2.25 2.25 0 0 1 7 5.5h10A2.25 2.25 0 0 1 19.25 7.75v8.5A2.25 2.25 0 0 1 17 18.5H7a2.25 2.25 0 0 1-2.25-2.25v-8.5Z" />
+      <path d="m5.5 7 6.5 5 6.5-5" />
+    </svg>
+  );
+}
+
 function formatPhone(value: string) {
   const digits = value.replace(/\D/g, "").slice(0, 11);
   const normalized = digits.startsWith("8") ? `7${digits.slice(1)}` : digits;
@@ -31,6 +48,7 @@ export default function ContactSection() {
   const [phone, setPhone] = useState("+7");
   const [fileName, setFileName] = useState("");
   const [status, setStatus] = useState<"idle" | "success">("idle");
+  const [comment, setComment] = useState("");
 
   const supportedFormats = useMemo(() => "PDF, DWG, STEP, JPG, PNG", []);
 
@@ -39,10 +57,10 @@ export default function ContactSection() {
       <div className="mx-auto max-w-[1340px] px-6">
         <div className="mx-auto max-w-[760px] text-center">
           <h2 className="text-4xl font-extrabold tracking-[-0.03em] text-white sm:text-6xl">
-            Отправьте чертёж или фото детали
+            Свяжитесь с нами любым удобным способом
           </h2>
           <p className="mt-6 text-[18px] leading-8 text-[#9AB2D1]">
-            Рассчитаем стоимость и сроки изготовления в течение 1–2 часов
+            Есть чертёж, фото детали или просто задача на словах — подскажем решение и рассчитаем стоимость.
           </p>
           <div className="mt-5 inline-flex items-center justify-center rounded-full border border-[#2B9D65] bg-[#1F3D45] px-5 py-2 text-[15px] font-semibold text-[#A5F2C2] shadow-[0_0_0_1px_rgba(74,222,128,0.12)]">
             Ответ менеджера в рабочее время — обычно до 120 минут
@@ -50,6 +68,20 @@ export default function ContactSection() {
           <p className="mt-4 text-[16px] text-[#8EA8C9]">
             Минимальный заказ от 30 000 ₽ · Серийное и мелкосерийное производство
           </p>
+        </div>
+
+        <div className="mx-auto mt-8 flex max-w-[760px] flex-wrap justify-center gap-3 text-[15px] font-semibold">
+          <a href="tel:+74951234567" className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-[#B5C8E3] transition hover:border-[#4ADE80]/35 hover:text-white">
+            <PhoneIcon />
+            Позвонить сейчас
+          </a>
+          <a href="mailto:info@kvartsmet.ru" className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-[#B5C8E3] transition hover:border-[#4ADE80]/35 hover:text-white">
+            <MailIcon />
+            Написать на почту
+          </a>
+          <span className="inline-flex items-center rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-[#B5C8E3]">
+            Нет чертежа? Просто опишите задачу в комментарии
+          </span>
         </div>
 
         <form
@@ -89,8 +121,10 @@ export default function ContactSection() {
             />
             <textarea
               name="comment"
-              placeholder="Комментарий к заказу"
+              placeholder="Комментарий к заказу или описание задачи"
               rows={4}
+              value={comment}
+              onChange={(event) => setComment(event.target.value)}
               className="rounded-[10px] border border-[#40516A] bg-[#243246] px-4 py-4 text-[18px] text-white outline-none transition focus:border-[#4ADE80] focus:shadow-[0_0_0_4px_rgba(74,222,128,0.12)] placeholder:text-[#8BA4C7]"
             />
           </div>
@@ -102,7 +136,7 @@ export default function ContactSection() {
               onChange={(event) => setFileName(event.target.files?.[0]?.name ?? "")}
             />
             <UploadIcon />
-            <p className="mt-4 text-[18px]">Перетащите чертёж или фото сюда</p>
+            <p className="mt-4 text-[18px]">Если есть файл — прикрепите чертёж или фото</p>
             <p className="mt-2 text-[16px]">{fileName || supportedFormats}</p>
           </label>
 
