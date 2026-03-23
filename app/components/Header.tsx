@@ -8,8 +8,7 @@ const navigation = [
   { href: "#contacts", label: "Контакты" },
 ];
 
-const logoSrc =
-  "https://raw.githubusercontent.com/SnamikMT/kvarcmet/35b211bc69308becde65b76f4f4cac2586b0d3f6/public/logo.png";
+const logoSrc = "/logo.png";
 
 function PhoneIcon() {
   return (
@@ -36,13 +35,16 @@ export default function Header() {
         </nav>
 
         <div className="hidden items-center gap-4 md:flex">
-          <a
-            href="tel:+74951234567"
-            className="inline-flex items-center gap-2 text-[15px] font-medium text-slate-300 transition hover:text-white"
-          >
-            <PhoneIcon />
-            +7 (495) 123-45-67
-          </a>
+          <div className="text-right text-[13px] leading-5 text-slate-400">
+            <a
+              href="tel:+74853254187"
+              className="inline-flex items-center gap-2 text-[15px] font-medium text-slate-300 transition hover:text-white"
+            >
+              <PhoneIcon />
+              +7 (48532) 5-41-87
+            </a>
+            <p>пн-пт 08:00–17:00</p>
+          </div>
           <a
             href="#contacts"
             className="inline-flex h-10 items-center rounded-[8px] bg-[#4ADE80] px-5 text-[15px] font-semibold text-[#07111F] transition duration-300 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-[0_12px_28px_rgba(74,222,128,0.26)]"
