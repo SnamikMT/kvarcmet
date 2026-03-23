@@ -69,7 +69,7 @@ export default function Footer() {
 
         <div className="mt-12 grid gap-12 md:grid-cols-[1.3fr_1fr_1.1fr]">
           <div>
-            <Image src={logoSrc} alt="КВАРЦМЕТ" width={300} height={74} className="h-auto w-[210px] md:w-[260px]" />
+            <Image src={logoSrc} alt="КВАРЦМЕТ" width={300} height={74} unoptimized className="h-auto w-[210px] md:w-[260px]" />
             <p className="mt-6 max-w-[420px] text-[18px] leading-8 text-[#93ACCE]">
               Серийное и мелкосерийное производство металлических деталей по чертежам, образцам, фото и техническому описанию.
             </p>

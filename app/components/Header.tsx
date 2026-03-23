@@ -23,7 +23,7 @@ export default function Header() {
     <header className="absolute inset-x-0 top-0 z-50">
       <div className="mx-auto flex max-w-[1340px] items-center justify-between gap-8 px-6 py-6 text-white">
         <div className="shrink-0">
-          <Image src={logoSrc} alt="КВАРЦМЕТ" width={300} height={74} priority className="h-auto w-[210px] md:w-[260px]" />
+          <Image src={logoSrc} alt="КВАРЦМЕТ" width={300} height={74} unoptimized className="h-auto w-[210px] md:w-[260px]" />
         </div>
 
         <nav className="hidden items-center gap-10 text-[15px] font-semibold text-slate-400 lg:flex">
