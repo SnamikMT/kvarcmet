@@ -25,10 +25,10 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen overflow-hidden bg-[#0C1529] text-white">
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-42"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-100"
         style={{ backgroundImage: `url('${heroBackground}')` }}
       />
-      <div className="absolute inset-0 bg-[linear-gradient(90deg,_rgba(12,21,41,0.985)_0%,_rgba(12,21,41,0.95)_34%,_rgba(12,21,41,0.82)_58%,_rgba(12,21,41,0.95)_100%)]" />
+<div className="absolute inset-0 bg-[linear-gradient(90deg,_rgba(12,21,41,0.5)_0%,_rgba(12,21,41,0.5)_34%,_rgba(12,21,41,0.5)_58%,_rgba(12,21,41,0.5)_100%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_68%,_rgba(255,255,255,0.05),_transparent_24%),radial-gradient(circle_at_72%_18%,_rgba(255,255,255,0.035),_transparent_18%)]" />
 
       <div className="relative mx-auto flex min-h-screen max-w-[1340px] items-center px-6 pt-32 pb-16">
