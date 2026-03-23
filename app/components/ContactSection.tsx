@@ -71,16 +71,16 @@ export default function ContactSection() {
         </div>
 
         <div className="mx-auto mt-8 flex max-w-[760px] flex-wrap justify-center gap-3 text-[15px] font-semibold">
-          <a href="tel:+74951234567" className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-[#B5C8E3] transition hover:border-[#4ADE80]/35 hover:text-white">
+          <a href="tel:+74853254187" className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-[#B5C8E3] transition hover:border-[#4ADE80]/35 hover:text-white">
             <PhoneIcon />
             Позвонить сейчас
           </a>
-          <a href="mailto:info@kvartsmet.ru" className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-[#B5C8E3] transition hover:border-[#4ADE80]/35 hover:text-white">
+          <a href="mailto:info@quartzmet.ru" className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-[#B5C8E3] transition hover:border-[#4ADE80]/35 hover:text-white">
             <MailIcon />
             Написать на почту
           </a>
           <span className="inline-flex items-center rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-[#B5C8E3]">
-            Нет чертежа? Просто опишите задачу в комментарии
+            пн-пт 08:00–17:00 · Рыбинское ш., 20Б, Углич
           </span>
         </div>
 

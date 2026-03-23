@@ -8,8 +8,7 @@ const navigation = [
   { href: "#contacts", label: "Контакты" },
 ];
 
-const logoSrc =
-  "https://raw.githubusercontent.com/SnamikMT/kvarcmet/35b211bc69308becde65b76f4f4cac2586b0d3f6/public/logo.png";
+const logoSrc = "/logo.png";
 
 function PhoneIcon() {
   return (
@@ -59,7 +58,7 @@ export default function Footer() {
                 Оставить заявку
               </a>
               <a
-                href="tel:+74951234567"
+                href="tel:+74853254187"
                 className="inline-flex h-12 items-center justify-center rounded-[8px] border border-white/12 px-6 text-[17px] font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-[#4ADE80]/35 hover:bg-white/[0.04]"
               >
                 Позвонить инженеру
@@ -90,18 +89,19 @@ export default function Footer() {
           <div>
             <h3 className="text-[22px] font-extrabold text-white">Контакты</h3>
             <div className="mt-5 space-y-4 text-[18px] text-[#97B0D1]">
-              <a href="tel:+74951234567" className="flex items-center gap-3 transition duration-300 hover:translate-x-1 hover:text-white">
+              <a href="tel:+74853254187" className="flex items-center gap-3 transition duration-300 hover:translate-x-1 hover:text-white">
                 <PhoneIcon />
-                +7 (495) 123-45-67
+                +7 (48532) 5-41-87
               </a>
-              <a href="mailto:info@kvartsmet.ru" className="flex items-center gap-3 transition duration-300 hover:translate-x-1 hover:text-white">
+              <a href="mailto:info@quartzmet.ru" className="flex items-center gap-3 transition duration-300 hover:translate-x-1 hover:text-white">
                 <MailIcon />
-                info@kvartsmet.ru
+                info@quartzmet.ru
               </a>
               <p className="flex items-center gap-3">
                 <MapPinIcon />
-                г. Москва, ул. Промышленная, д. 12
+                Рыбинское ш., 20Б, Углич
               </p>
+              <p className="pl-8 text-[16px] text-[#89A3C7]">пн-пт 08:00–17:00</p>
             </div>
           </div>
         </div>
